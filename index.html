@@ -1,0 +1,743 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Robert Kingsly · SRE / DevOps · Associate Cloud Service Manager</title>
+<meta name="description" content="Robert Kingsly: Site Reliability and DevOps professional and Associate Cloud Service Manager with 9+ years across AWS, Azure and GCP. Kubernetes, GitOps, observability, incident response, security, release management and cost optimisation.">
+<meta name="author" content="Robert Kingsly">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Robert Kingsly · SRE / DevOps · Associate Cloud Service Manager">
+<meta property="og:description" content="9+ years keeping cloud platforms reliable: Kubernetes and GitOps in depth, with breadth across security, releases, cost and leadership.">
+<meta property="og:url" content="https://robertkingslys.github.io/">
+<meta property="og:image" content="https://robertkingslys.github.io/img/man2.png">
+<meta name="theme-color" content="#0a1120">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230a1120'/%3E%3Ctext x='32' y='42' text-anchor='middle' font-family='Arial' font-weight='700' font-size='28' fill='%232dd4bf'%3ERK%3C/text%3E%3C/svg%3E">
+<script>(function(){try{var t=localStorage.getItem('rk-theme');if(!t)t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';document.documentElement.setAttribute('data-theme',t)}catch(e){}})();</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Robert Kingsly","jobTitle":"SRE / DevOps · Associate Cloud Service Manager","url":"https://robertkingslys.github.io/","sameAs":["https://www.linkedin.com/in/robertkingsly/","https://github.com/robertkingslys"],"knowsAbout":["Site Reliability Engineering","Kubernetes","GitOps","AWS","Azure","GCP","Terraform","Datadog","Incident management"]}</script>
+<style>
+:root{--bg:#0a1120;--bg-elev:#0f1a30;--card:rgba(255,255,255,.045);--card-2:rgba(255,255,255,.08);--line:rgba(148,163,184,.18);--text:#e8eef8;--muted:#9eb0c9;--accent:#2dd4bf;--accent-2:#818cf8;--amber:#fbbf24;--rose:#fb7185;--green:#34d399;--sky:#38bdf8;--shadow:0 18px 40px rgba(2,6,23,.45);--r:18px;--maxw:1180px;--nav:64px}
+[data-theme="light"]{--bg:#f4f7fc;--bg-elev:#ffffff;--card:#ffffff;--card-2:#eef3fa;--line:#dfe6f0;--text:#0f172a;--muted:#55657d;--accent:#0f9488;--accent-2:#4f46e5;--amber:#b45309;--rose:#e11d48;--green:#047857;--sky:#0369a1;--shadow:0 10px 28px rgba(15,23,42,.08)}
+*{box-sizing:border-box}[hidden]{display:none!important}
+html{scroll-behavior:smooth;scroll-padding-top:var(--nav)}
+body{margin:0;background:var(--bg);color:var(--text);font:16px/1.65 ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:6px}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+.skip{position:absolute;left:-999px;top:8px;background:var(--accent);color:#04101d;padding:8px 12px;border-radius:8px;z-index:100}.skip:focus{left:8px}
+.nav{position:sticky;top:0;z-index:40;background:var(--bg);background:color-mix(in srgb,var(--bg) 82%,transparent);backdrop-filter:blur(14px) saturate(1.3);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.nav .wrap{height:var(--nav);display:flex;align-items:center;gap:16px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:800;color:var(--text)}.brand:hover{text-decoration:none}
+.logo{width:34px;height:34px;border-radius:10px;display:grid;place-items:center;background:linear-gradient(135deg,var(--accent),var(--accent-2));color:#04101d;font-size:13px;font-weight:900}
+.links{display:flex;gap:2px;margin-left:auto;overflow-x:auto;scrollbar-width:none}.links::-webkit-scrollbar{display:none}
+.links a{color:var(--muted);font-weight:600;font-size:14px;padding:8px 10px;border-radius:9px;white-space:nowrap}
+.links a:hover,.links a.on{color:var(--text);background:var(--card-2);text-decoration:none}
+.tools{display:flex;gap:8px;margin-left:auto}.links+.tools{margin-left:0}
+.icon-btn{width:38px;height:38px;border-radius:10px;border:1px solid var(--line);background:var(--card);color:var(--text);display:grid;place-items:center;cursor:pointer;font-size:15px}
+.icon-btn:hover{background:var(--card-2)}
+@media(max-width:1020px){.links{display:none}}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:11px 18px;border-radius:12px;border:1px solid var(--line);background:var(--card);color:var(--text);font:inherit;font-weight:700;font-size:14.5px;cursor:pointer;transition:transform .15s,background .15s}
+.btn:hover{transform:translateY(-1px);text-decoration:none;background:var(--card-2)}
+.btn.primary{background:linear-gradient(135deg,var(--accent),var(--accent-2));border:0;color:#04101d}
+section.slide{padding:92px 0;position:relative}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:12.5px;font-weight:800;letter-spacing:1.6px;text-transform:uppercase;color:var(--accent)}
+.eyebrow::before{content:"";width:22px;height:2px;background:currentColor;border-radius:2px}
+h1,h2,h3{line-height:1.2;margin:0}
+h2{font-size:clamp(28px,3.4vw,40px);margin:10px 0 12px;letter-spacing:-.4px}
+.lead{color:var(--muted);font-size:17.5px;max-width:780px;margin:0 0 32px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:22px;box-shadow:var(--shadow)}
+.grid{display:grid;gap:18px}.g2{grid-template-columns:repeat(2,minmax(0,1fr))}.g3{grid-template-columns:repeat(3,minmax(0,1fr))}.g4{grid-template-columns:repeat(4,minmax(0,1fr))}
+@media(max-width:980px){.g3,.g4{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:680px){.g2,.g3,.g4{grid-template-columns:1fr}}
+.chip{display:inline-flex;align-items:center;gap:6px;padding:4px 11px;border-radius:999px;border:1px solid var(--line);background:var(--card-2);font-size:13px;font-weight:600;color:var(--text);margin:3px 6px 3px 0}
+.muted{color:var(--muted)}.note{font-size:13px;color:var(--muted);margin-top:10px}
+.hero{min-height:calc(100vh - var(--nav));display:flex;align-items:center;overflow:hidden}
+.hero::before,.hero::after{content:"";position:absolute;border-radius:50%;filter:blur(80px);opacity:.32;z-index:-1;pointer-events:none}
+.hero::before{width:520px;height:520px;background:var(--accent-2);top:-140px;right:-120px;animation:float 14s ease-in-out infinite}
+.hero::after{width:440px;height:440px;background:var(--accent);bottom:-160px;left:-120px;animation:float 18s ease-in-out infinite reverse}
+@keyframes float{0%,100%{transform:translate(0,0)}50%{transform:translate(30px,-24px)}}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,.9fr);gap:48px;align-items:center}
+@media(max-width:980px){.hero-grid{grid-template-columns:minmax(0,1fr)}}
+.hello{font-size:15px;color:var(--muted);font-weight:600}
+h1{font-size:clamp(40px,6vw,68px);letter-spacing:-1.2px;margin:6px 0 10px}
+.grad{background:linear-gradient(120deg,var(--accent),var(--accent-2) 60%,var(--rose));-webkit-background-clip:text;background-clip:text;color:transparent}
+.role{font-size:clamp(18px,2.2vw,22px);font-weight:700;margin-bottom:14px}.role span{color:var(--muted);font-weight:600}
+.summary{font-size:17px;color:var(--muted);max-width:640px}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin:26px 0 22px}
+.facts{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;max-width:680px}@media(max-width:560px){.facts{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.fact{padding:10px 14px;border-radius:14px;background:var(--card);border:1px solid var(--line)}.fact b{display:block;font-size:20px;white-space:nowrap}.fact span{font-size:12.5px;color:var(--muted);font-weight:600;line-height:1.35;display:block}
+.portrait{position:relative;justify-self:center;width:min(340px,80vw);aspect-ratio:1}
+.ring{position:absolute;inset:0;border-radius:50%;background:conic-gradient(from 210deg,var(--accent),var(--accent-2),var(--rose),var(--accent));padding:5px}
+.ring img,.initials{width:100%;height:100%;border-radius:50%;object-fit:cover;object-position:50% 28%;display:block;border:6px solid var(--bg)}
+.initials{display:grid;place-items:center;font-size:96px;font-weight:900;background:var(--bg-elev);color:var(--accent)}
+.badge{position:absolute;padding:8px 12px;border-radius:12px;background:var(--bg-elev);border:1px solid var(--line);box-shadow:var(--shadow);font-size:13px;font-weight:700;white-space:nowrap}
+.badge.b1{top:8%;left:-14%}.badge.b2{bottom:18%;right:-16%}.badge.b3{bottom:-2%;left:4%}.badge i{font-style:normal;color:var(--accent)}
+@media(max-width:560px){.badge{display:none}}
+.kpi{position:relative;overflow:hidden}.kpi::after{content:"";position:absolute;right:-50px;bottom:-70px;width:160px;height:160px;border-radius:50%;background:var(--k,var(--accent));opacity:.13}
+.kpi .num{font-size:clamp(34px,4vw,46px);font-weight:900;letter-spacing:-1px;line-height:1}
+.kpi .lbl{font-weight:700;margin-top:8px}.kpi .sub{font-size:13.5px;color:var(--muted);margin-top:4px}
+.bars{display:flex;align-items:flex-end;gap:10px;height:300px;padding-top:6px}
+.bar{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;gap:6px;height:100%}
+.bar i{display:block;width:100%;border-radius:8px 8px 4px 4px;background:linear-gradient(180deg,var(--accent),var(--accent-2));min-height:4px}
+.bar b{font-size:12px}.bar span{font-size:11.5px;color:var(--muted)}
+.hb{display:grid;grid-template-columns:190px 1fr 36px;gap:10px;align-items:center;font-size:13.5px;margin:7px 0}
+.hb .t{height:10px;background:var(--card-2);border-radius:6px;overflow:hidden}.hb .t i{display:block;height:100%;border-radius:6px;background:linear-gradient(90deg,var(--accent),var(--accent-2))}
+.hb b{text-align:right}@media(max-width:520px){.hb{grid-template-columns:120px 1fr 32px}}
+.tlower{display:grid;grid-template-columns:1fr minmax(270px,340px) 1.15fr;gap:24px;margin-top:18px;align-items:start}
+@media(max-width:1020px){.tlower{grid-template-columns:1fr}.tlegend{order:3}}
+.tlegend p{font-size:14px;margin:8px 0}.tlegend b{color:var(--accent)}
+.tdetail{background:var(--card-2);border:1px solid var(--line);border-radius:14px;padding:16px 18px;min-height:100%}
+.tbar{display:grid;grid-template-columns:repeat(11,minmax(0,1fr));gap:6px}@media(max-width:860px){.tbar{grid-template-columns:repeat(4,minmax(0,1fr))}}@media(max-width:520px){.tbar{grid-template-columns:repeat(3,minmax(0,1fr))}}
+.tstem{display:grid;gap:6px;width:100%}
+.tseg{border:1px solid var(--line);background:var(--card-2);color:var(--text);border-radius:12px;padding:10px 6px;cursor:pointer;text-align:center;font:inherit;font-size:12px;font-weight:700;line-height:1.25;min-height:84px;display:flex;flex-direction:column;justify-content:space-between;align-items:stretch;gap:6px;transition:transform .15s,border-color .15s}
+.tseg:hover{transform:translateY(-2px)}.tseg.on{border-color:var(--accent);box-shadow:0 0 0 2px color-mix(in srgb,var(--accent) 45%,transparent)}
+.tseg .ico{font-size:19px}.tseg .m{height:5px;border-radius:4px;background:color-mix(in srgb,var(--text) 12%,transparent);overflow:hidden}.tseg .m i{display:block;height:100%;background:var(--accent-2)}
+.tstem .tseg{min-height:62px;flex-direction:row;align-items:center;text-align:left;padding:12px 14px;font-size:14px;background:linear-gradient(135deg,color-mix(in srgb,var(--accent) 24%,transparent),color-mix(in srgb,var(--accent-2) 18%,transparent))}
+.tstem .tseg .lbl{flex:1}.tstem .tseg .m{width:70px;flex:0 0 70px}.tstem .tseg .m i{background:var(--accent)}
+.tlabels{display:flex;justify-content:space-between;font-size:12px;color:var(--muted);font-weight:800;letter-spacing:1px;text-transform:uppercase;margin:0 0 8px}
+.tdetail h3{font-size:22px;margin:6px 0}.tdetail .ev{font-weight:800;color:var(--accent)}.tdetail ul{margin:10px 0 12px;padding-left:18px}.tdetail li{margin:5px 0}
+.kind{font-size:12px;font-weight:800;letter-spacing:1.2px;text-transform:uppercase;color:var(--muted)}.tprint{display:none}
+.timeline{list-style:none;margin:0;padding:0;position:relative}
+.timeline::before{content:"";position:absolute;left:150px;top:6px;bottom:0;width:2px;background:linear-gradient(var(--accent),var(--accent-2),transparent)}
+.role-item{display:grid;grid-template-columns:150px 1fr;gap:30px;margin-bottom:24px;position:relative}
+.role-item::before{content:"";position:absolute;left:144px;top:24px;width:14px;height:14px;border-radius:50%;background:var(--bg);border:3px solid var(--accent)}
+.when{font-weight:800;color:var(--muted);font-size:14px;padding:18px 10px 0 0;text-align:right}
+.org{color:var(--muted);font-weight:600;margin:4px 0 10px}.role-item h3{font-size:20px}
+.tchips{display:flex;flex-wrap:wrap;margin:4px 0 10px}.chip.deep{border-color:color-mix(in srgb,var(--accent) 65%,transparent)}.chip.broad{border-color:color-mix(in srgb,var(--accent-2) 65%,transparent)}
+.role-item ul{margin:0;padding-left:18px}.role-item li{margin:6px 0}
+@media(max-width:760px){.timeline::before{left:8px}.role-item{grid-template-columns:1fr;gap:6px;padding-left:30px}.role-item::before{left:2px;top:4px}.when{text-align:left;padding:0}}
+.case .tag{font-size:12px;font-weight:800;letter-spacing:1px;text-transform:uppercase;color:var(--accent-2)}.case h3{font-size:19px;margin:8px 0 10px}
+.psa{display:grid;gap:8px;margin:10px 0 4px}.psa div{padding:10px 12px;border-radius:12px;background:var(--card-2);font-size:14.5px}
+.psa b{display:block;font-size:11.5px;letter-spacing:1px;text-transform:uppercase;color:var(--muted)}
+.case.wide{grid-column:1/-1}.case.wide .psa{grid-template-columns:repeat(3,minmax(0,1fr))}@media(max-width:860px){.case.wide .psa{grid-template-columns:1fr}}
+.flowlbl{font-size:12px;font-weight:800;letter-spacing:1px;text-transform:uppercase;color:var(--muted);margin-top:14px}
+.flow{display:flex;flex-wrap:wrap;align-items:center;gap:6px;margin:6px 0 2px}
+.flow .n{padding:7px 10px;border-radius:10px;border:1px solid var(--line);background:var(--bg-elev);font-size:13px;font-weight:700}
+.flow .n.new{border-color:var(--accent);color:var(--accent)}.flow .a{color:var(--muted);font-weight:800}
+.sprint-kpis{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-bottom:18px}@media(max-width:980px){.sprint-kpis{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.sk{padding:16px;border-radius:14px;background:var(--card);border:1px solid var(--line)}.sk b{font-size:28px;display:block;line-height:1.1}.sk span{font-size:13px;color:var(--muted);font-weight:600}
+.hl{list-style:none;padding:0;margin:0;display:grid;gap:10px;grid-template-columns:repeat(2,minmax(0,1fr))}@media(max-width:860px){.hl{grid-template-columns:1fr}}
+.hl li{padding:12px 14px 12px 46px;border-radius:12px;background:var(--card);border:1px solid var(--line);position:relative}
+.hl li::before{content:"✓";position:absolute;left:14px;top:12px;width:20px;height:20px;border-radius:50%;background:var(--accent);color:#04101d;font-size:12px;font-weight:900;display:grid;place-items:center}
+.skill h3{font-size:16px;margin-bottom:10px;display:flex;align-items:center;gap:8px}
+.contact{text-align:center}.contact .lead{margin:0 auto 10px}.contact .btns{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-top:22px}
+footer{border-top:1px solid var(--line);padding:26px 0;color:var(--muted);font-size:13.5px}footer .wrap{display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between}
+kbd{border:1px solid var(--line);border-bottom-width:2px;border-radius:6px;padding:1px 6px;font-size:12px;background:var(--card-2);font-family:inherit}
+.reveal{opacity:0;transform:translateY(16px);transition:opacity .6s ease,transform .6s ease}.reveal.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}.reveal{opacity:1;transform:none}}
+.present-ui,.progress{display:none}
+body.presenting .nav,body.presenting footer{display:none}
+body.presenting section.slide{display:none}
+body.presenting section.slide.current{display:flex;flex-direction:column;justify-content:flex-start;height:100vh;overflow-y:auto;padding:28px 0 84px;animation:slidein .35s ease}
+body.presenting section.slide.current>.wrap{margin-top:auto;margin-bottom:auto;width:100%}
+@media (max-height:1000px){body.presenting section.slide.current>.wrap{zoom:.82}}
+body.presenting .hero{min-height:0}
+body.presenting .hero::before{top:0;right:0}body.presenting .hero::after{bottom:0;left:0}body.presenting .lead{margin-bottom:16px}
+body.presenting .reveal{opacity:1;transform:none}
+@keyframes slidein{from{opacity:0;transform:translateX(24px)}to{opacity:1;transform:none}}
+body.presenting .present-ui{display:flex;position:fixed;left:50%;bottom:18px;transform:translateX(-50%);z-index:60;gap:8px;align-items:center;padding:8px 10px;border-radius:14px;background:var(--bg-elev);border:1px solid var(--line);box-shadow:var(--shadow)}
+.present-ui .count{font-weight:800;font-size:13px;min-width:64px;text-align:center}.present-ui .ttl{font-size:13px;color:var(--muted);font-weight:700;padding:0 6px}
+body.presenting .progress{display:block;position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,var(--accent),var(--accent-2));z-index:61;transition:width .3s}
+.term{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:13px;background:#050a14;border:1px solid var(--line);color:#c8f7ec;border-radius:12px;padding:10px 14px;margin:18px 0 0;max-width:640px;box-shadow:var(--shadow);overflow-x:auto}
+[data-theme="light"] .term{background:#0f172a;color:#d1fae5}
+.term .bar3{display:flex;gap:6px;margin-bottom:8px}.term .bar3 i{width:10px;height:10px;border-radius:50%;background:#ef4444}.term .bar3 i:nth-child(2){background:#f59e0b}.term .bar3 i:nth-child(3){background:#22c55e}
+.term .p{color:var(--accent);margin-right:8px}.term pre{margin:6px 0 0;font:inherit;color:#93c5fd;white-space:pre}.term .ok{color:#4ade80}
+.cursor{display:inline-block;width:8px;height:15px;background:currentColor;vertical-align:-2px;margin-left:2px;animation:blink 1s steps(1) infinite}@keyframes blink{50%{opacity:0}}
+.dash{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}@media(max-width:980px){.dash{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:520px){.dash{grid-template-columns:1fr}}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 16px;position:relative;overflow:hidden;box-shadow:var(--shadow)}
+.ph{display:flex;align-items:center;justify-content:space-between;gap:8px;font-size:11.5px;font-weight:800;letter-spacing:.9px;text-transform:uppercase;color:var(--muted)}
+.ph i{flex:0 0 auto;width:8px;height:8px;border-radius:50%;background:#22c55e;box-shadow:0 0 0 4px rgba(34,197,94,.16);animation:pulse 2.4s ease-in-out infinite}@keyframes pulse{50%{box-shadow:0 0 0 7px rgba(34,197,94,.05)}}
+.big{font-size:34px;font-weight:900;line-height:1.1;margin-top:8px;letter-spacing:-.5px}.big small{font-size:14px;color:var(--muted);font-weight:700;margin-left:6px}
+.sm{font-size:13px;color:var(--muted);margin-top:4px}
+.bars.sm-bars{height:230px}
+.stackbar{display:flex;height:14px;border-radius:8px;overflow:hidden;margin-top:12px;background:var(--card-2)}.stackbar span{display:block;height:100%}
+.leg{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:12.5px;color:var(--muted);margin-top:10px}.leg b{color:var(--text);margin-left:4px}.leg i{display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:6px;vertical-align:-1px}
+.gauge{display:flex;align-items:center;gap:10px;margin-top:2px}.gauge svg{width:150px;height:auto}.gauge .gv{font-size:30px;font-weight:900}.gauge .gv small{font-size:13px;color:var(--muted);font-weight:700}
+.ai-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:16px;align-items:start}@media(max-width:980px){.ai-grid{grid-template-columns:1fr}}
+.constellation svg,.ring2 svg{width:100%;height:auto;display:block}
+.orbit{fill:none;stroke:var(--line);stroke-width:1.5;stroke-dasharray:6 8;animation:dash 30s linear infinite}@keyframes dash{to{stroke-dashoffset:-280}}
+.spoke{stroke:var(--accent);stroke-opacity:.35}.nlabel{font-size:12.5px;font-weight:800;fill:var(--text)}.ncount{font-size:11.5px;font-weight:700;fill:var(--muted)}
+.guard{margin:8px 0 0;padding-left:18px}.guard li{margin:6px 0;font-size:14px}.guard b{color:var(--accent)}
+.oc{border-top:4px solid var(--c)}.oc .num{font-size:44px;font-weight:900;line-height:1;margin:8px 0 2px}.oc ul{margin:10px 0 0;padding-left:18px;font-size:14px}.oc li{margin:5px 0}
+.pipeline{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:10px;margin:6px 0 4px}@media(max-width:980px){.pipeline{grid-template-columns:repeat(3,minmax(0,1fr))}}@media(max-width:520px){.pipeline{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.stage{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px;position:relative;overflow:hidden}.stage b{display:block;font-size:14px;margin-top:4px}.stage span{font-size:12.5px;color:var(--muted)}.stage .ico{font-size:22px}
+.stage::after{content:"";position:absolute;left:0;bottom:0;height:3px;width:100%;background:linear-gradient(90deg,var(--accent),var(--accent-2));transform-origin:left;transform:scaleX(0);animation:fill 7s ease-in-out infinite;animation-delay:calc(var(--i) * .7s)}
+@keyframes fill{0%{transform:scaleX(0)}12%,100%{transform:scaleX(1)}}
+.stage .n{position:absolute;top:10px;right:12px;font-size:11px;font-weight:800;color:var(--muted)}
+.print-only{display:none}
+@media print{
+.print-only{display:block;font-size:10.5pt;color:#333;margin:-6px 0 12px}
+:root,[data-theme]{--bg:#fff;--bg-elev:#fff;--card:#fff;--card-2:#f3f5f9;--line:#d9dee7;--text:#111;--muted:#444;--accent:#0f766e;--accent-2:#4338ca;--shadow:none}
+.nav,.present-ui,.progress,.cta,.icon-btn,.badge,.tdetail,.tseg .m,.hero::before,.hero::after,footer .hint,.skip,.term,.ph i,.stage::after{display:none!important}
+.panel,.stage{break-inside:avoid;box-shadow:none}.orbit{animation:none}
+body{font-size:11pt}section.slide{padding:12px 0}.hero{min-height:0}.reveal{opacity:1!important;transform:none!important}
+.card,.sk,.hl li,.role-item{break-inside:avoid}.tprint{display:block;margin-top:12px}.grad{color:#0f766e;background:none}
+.contact .btns a[data-print]::after{content:" · " attr(data-print);font-weight:400}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="progress" id="progress"></div>
+<header class="nav">
+ <div class="wrap">
+  <a class="brand" href="#home"><span class="logo">RK</span>Robert Kingsly</a>
+  <nav class="links" aria-label="Sections">
+   <a href="#impact">Scorecard</a><a href="#ai">AI &amp; MCP</a><a href="#tshape">T-shape</a><a href="#outcomes">Impact</a><a href="#team">Team</a><a href="#release">Releases</a><a href="#experience">Experience</a><a href="#cases">Cases</a><a href="#contact">Contact</a>
+  </nav>
+  <div class="tools">
+   <button class="icon-btn" type="button" data-present title="Present (P)" aria-label="Start presentation">▶</button>
+   <button class="icon-btn" type="button" id="printBtn" title="Save CV as PDF" aria-label="Print or save as PDF"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9V2h12v7"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><path d="M6 14h12v8H6z"/></svg></button>
+   <button class="icon-btn" type="button" id="themeBtn" title="Light / dark" aria-label="Toggle colour theme">◐</button>
+  </div>
+ </div>
+</header>
+<main id="main">
+
+<section id="home" class="slide hero" data-title="Introduction">
+ <div class="wrap hero-grid">
+  <div>
+   <div class="hello">Hello, I'm</div>
+   <h1><span class="grad">Robert Kingsly</span></h1>
+   <div class="role">SRE / DevOps <span>·</span> Associate Cloud Service Manager</div>
+   <div class="print-only">srobertkingsly@gmail.com · +91 90438 10120 · linkedin.com/in/robertkingsly · robertkingslys.github.io</div>
+   <p class="summary">Site reliability and DevOps professional with 9+ years running production cloud platforms on AWS, Azure and GCP. Deep in Kubernetes, GitOps and observability; broad across security, release and change management, cost optimisation and leading cross-functional teams.</p>
+   <div class="cta">
+    <a class="btn primary" href="#contact">Get in touch</a>
+    <button class="btn" type="button" data-present>▶ Present</button>
+    <a class="btn" href="https://www.linkedin.com/in/robertkingsly/" target="_blank" rel="noopener">LinkedIn</a>
+   </div>
+   <div class="facts">
+    <div class="fact"><b>9+ years</b><span>Cloud, SRE &amp; DevOps</span></div>
+    <div class="fact"><b>99.9%</b><span>Service availability maintained</span></div>
+    <div class="fact"><b>Up to 20%</b><span>Lower cloud spend</span></div>
+    <div class="fact"><b>3 clouds</b><span>AWS · Azure · GCP</span></div>
+   </div>
+   <div class="term" aria-label="Engineer summary in terminal style">
+    <div class="bar3" aria-hidden="true"><i></i><i></i><i></i></div>
+    <div><span class="p">$</span><span id="typed">kubectl get engineer robert-kingsly -o wide</span><span class="cursor" aria-hidden="true"></span></div>
+<pre id="termOut">NAME             STATUS   ROLE         CLOUDS          MTTA   AI-AGENTS
+robert-kingsly   <span class="ok">Ready</span>    sre/devops   aws,azure,gcp   52s    10 MCP servers</pre>
+   </div>
+  </div>
+  <div class="portrait">
+   <div class="ring"><img src="img/man2.png" alt="Portrait of Robert Kingsly" width="330" height="330" onerror="this.hidden=true;this.nextElementSibling.hidden=false"><div class="initials" hidden>RK</div></div>
+   <div class="badge b1"><i>●</i> Kubernetes &amp; GitOps</div>
+   <div class="badge b2"><i>●</i> Observability &amp; on-call</div>
+   <div class="badge b3"><i>●</i> AI-assisted automation</div>
+  </div>
+ </div>
+</section>
+
+<section id="impact" class="slide" data-title="12-month scorecard">
+ <div class="wrap">
+  <span class="eyebrow">SRE scorecard · last 12 months</span>
+  <h2>The year in production, by the numbers</h2>
+  <p class="lead">Read-only pulls from PagerDuty, Datadog, Azure DevOps and GitHub for 7 Nov 2025 – 6 Nov 2026. My activity in these systems starts in February 2026. All figures are aggregated and counted once per source.</p>
+  <div class="dash">
+   <div class="panel reveal"><div class="ph">On-call incidents <i></i></div><div class="big" data-count="439">439</div><div class="sm">paged to me · 403 acknowledged · 116 resolved by me</div></div>
+   <div class="panel reveal"><div class="ph">Time to acknowledge <i></i></div><div class="gauge" id="mttaGauge"></div><div class="sm">median of 403 incidents · 98% within 5 minutes</div></div>
+   <div class="panel reveal"><div class="ph">Production changes <i></i></div><div class="big" data-count="69">69</div><div class="sm">change requests through CAB, plus 30 cloud changes in the latest sprint</div></div>
+   <div class="panel reveal"><div class="ph">Monitors <i></i></div><div class="big">16<small>live</small></div><div class="sm">created and running · 320 generated in an automated rollout · 50 tuned</div></div>
+   <div class="panel reveal"><div class="ph">Releases <i></i></div><div class="big" data-count="62">62</div><div class="sm">deployment &amp; release PRs (40 merged) · 10 services · 71 release work items</div></div>
+   <div class="panel reveal"><div class="ph">Bugs fixed <i></i></div><div class="big" data-count="26">26</div><div class="sm">bugs closed · 18 code-fix PRs in application repos (14 merged)</div></div>
+   <div class="panel reveal"><div class="ph">Customer issues <i></i></div><div class="big" data-count="41">41</div><div class="sm">customer &amp; tenant requests · 29 closed by me · 7 PRs</div></div>
+   <div class="panel reveal"><div class="ph">Peer reviews <i></i></div><div class="big" data-count="208">208</div><div class="sm">teammates' PRs reviewed · 19 engineers · 18 repositories</div></div>
+  </div>
+  <div class="grid g2" style="margin-top:16px">
+   <div class="panel reveal"><div class="ph">Incident load by month <i></i></div><div class="bars sm-bars" id="pdMonthly"></div><div class="note">Incidents I acted on, by month. Spikes are my on-call weeks.</div></div>
+   <div class="panel reveal"><div class="ph">Incident priority mix · 418 incidents <i></i></div><div id="prioBar"></div><div class="ph" style="margin-top:22px">Production change mix · 69 changes <i></i></div><div id="chgMix"></div>
+    <div class="ph" style="margin-top:22px">Monitors I built · 16 live <i></i></div><div id="monMix"></div></div>
+  </div>
+ </div>
+</section>
+
+<section id="delivery" class="slide" data-title="Delivery rhythm">
+ <div class="wrap">
+  <span class="eyebrow">Delivery rhythm</span>
+  <h2>Shipping steadily, month after month</h2>
+  <p class="lead">My GitHub pull requests in 2026 and where the effort went across the platform.</p>
+  <div class="grid g2" style="margin-top:4px">
+   <div class="panel reveal"><div class="ph">Pull requests per month <i></i></div><div class="bars" id="monthly"></div><div class="note">339 authored · 258 merged · 26 repositories. November is month-to-date.</div></div>
+   <div class="panel reveal"><div class="ph">Where the work went <i></i></div><div id="focus"></div><div class="note">Share of 798 PRs and work items; one item can touch several areas.</div></div>
+  </div>
+ </div>
+</section>
+
+<section id="ai" class="slide" data-title="AI & MCP">
+ <div class="wrap">
+  <span class="eyebrow">AI-augmented SRE</span>
+  <h2>Agents do the legwork. I own the outcome.</h2>
+  <p class="lead">I run AI agents (GitHub Copilot CLI) wired into production tooling through MCP servers. They investigate, draft and repeat; I decide. Every write is confirmed by me, and every AI-written ticket comment or PR description is signed.</p>
+  <div class="dash">
+   <div class="panel reveal"><div class="ph">Agent sessions <i></i></div><div class="big">108</div><div class="sm">Copilot CLI sessions, May – Nov 2026</div></div>
+   <div class="panel reveal"><div class="ph">MCP tool calls <i></i></div><div class="big">3.8k</div><div class="sm">across 10 MCP servers</div></div>
+   <div class="panel reveal"><div class="ph">AI models <i></i></div><div class="big">8</div><div class="sm">Claude and GPT families, picked per task</div></div>
+   <div class="panel reveal"><div class="ph">Human in the loop <i></i></div><div class="big">203</div><div class="sm">times an agent paused to ask me before acting</div></div>
+   <div class="panel reveal"><div class="ph">AI-assisted PRs <i></i></div><div class="big">89</div><div class="sm">26% of my 2026 pull requests</div></div>
+   <div class="panel reveal"><div class="ph">AI-documented tickets <i></i></div><div class="big">106</div><div class="sm">work items with AI-drafted write-ups signed in my name</div></div>
+   <div class="panel reveal"><div class="ph">Agent-run commands <i></i></div><div class="big">8.2k</div><div class="sm">shell commands, 99.6% successful</div></div>
+   <div class="panel reveal"><div class="ph">Knowledge base <i></i></div><div class="big">21</div><div class="sm">Confluence page creates and updates done through agents</div></div>
+  </div>
+  <div class="ai-grid" style="margin-top:16px">
+   <div class="panel constellation reveal"><div class="ph">MCP constellation · tool calls per server <i></i></div><div id="mcp"></div></div>
+   <div class="panel reveal"><div class="ph">Models in rotation · sessions <i></i></div><div id="models" style="margin-top:8px"></div>
+    <div class="ph" style="margin-top:18px">Guardrails I follow</div>
+    <ul class="guard">
+     <li>Read-only investigation first; writes only after I confirm.</li>
+     <li>Secrets move through secure files, never through prompts or chat output.</li>
+     <li>AI-written comments and PR descriptions carry an attribution line.</li>
+     <li>Same review, tests and change control as human-written work.</li>
+    </ul></div>
+  </div>
+ </div>
+</section>
+
+<section id="tshape" class="slide" data-title="T-shaped engineer">
+ <div class="wrap">
+  <span class="eyebrow">Engineering model</span>
+  <h2>A T-shaped engineer</h2>
+  <p class="lead">Depth in keeping Kubernetes platforms reliable, and the breadth to own what surrounds production: security, releases, data, cost, customers and people. Select any block to see the evidence.</p>
+  <div class="card reveal">
+   <div class="tlabels"><span>Breadth</span><span>across the platform</span></div>
+   <div class="tbar" id="tbar"></div>
+   <div class="tlower">
+    <div class="tlegend">
+     <div class="kind">How to read it</div>
+     <p><b>▼ Depth</b> — the reliability core I'm accountable for: running Kubernetes in production, responding to incidents, seeing problems early and changing production safely.</p>
+     <p><b>◀▶ Breadth</b> — the disciplines around production that I own day to day.</p>
+     <p class="muted">Bars show 2026 evidence from my GitHub pull requests and Azure DevOps work items. Select any block.</p>
+    </div>
+    <div><div class="tlabels" style="justify-content:center"><span>Depth · the SRE core</span></div><div class="tstem" id="tstem"></div></div>
+    <div class="tdetail" id="tdetail" aria-live="polite"></div>
+   </div>
+  </div>
+  <div class="tprint" id="tprint"></div>
+ </div>
+</section>
+<section id="outcomes" class="slide" data-title="Impact areas">
+ <div class="wrap">
+  <span class="eyebrow">Impact areas</span>
+  <h2>Where my changes land</h2>
+  <p class="lead">Every pull request and work item from the last 12 months, tagged by the outcome it served. One item can serve more than one outcome.</p>
+  <div class="grid g4">
+   <div class="card oc reveal" style="--c:var(--accent)"><div class="kind">Production changes</div><div class="num">69</div><div class="muted">CAB-approved change requests</div>
+    <ul><li>23 certificate &amp; TLS changes</li><li>13 security &amp; WAF changes</li><li>13 deployments &amp; upgrades</li><li>11 decommissions &amp; clean-ups</li></ul></div>
+   <div class="card oc reveal" style="--c:var(--green)"><div class="kind">Reliability</div><div class="num">184</div><div class="muted">PRs and work items</div>
+    <ul><li>Self-healing routing after database failover</li><li>Blue/green and canary rollouts with rollback plans</li><li>Out-of-memory and crash fixes at the root</li><li>Monitors that catch regressions after deploys</li></ul></div>
+   <div class="card oc reveal" style="--c:var(--amber)"><div class="kind">Cost optimisation</div><div class="num">65</div><div class="muted">PRs and work items</div>
+    <ul><li>Rightsizing analysis across services</li><li>Idle non-production node groups scaled to zero</li><li>Legacy hosts, bastions and stale resources retired</li></ul></div>
+   <div class="card oc reveal" style="--c:var(--accent-2)"><div class="kind">Performance</div><div class="num">53</div><div class="muted">PRs and work items</div>
+    <ul><li>Autoscaling tuned to drain queue backlogs</li><li>Database write capacity raised after throttling</li><li>Fail-fast timeouts on slow dependencies</li></ul></div>
+  </div>
+ </div>
+</section>
+
+<section id="team" class="slide" data-title="Team">
+ <div class="wrap">
+  <span class="eyebrow">Supporting &amp; coordinating the team</span>
+  <h2>A force multiplier, not a lone hero</h2>
+  <p class="lead">Reliability is a team sport. Much of my impact is making other engineers faster and making sure the right people are in the room when it matters.</p>
+  <div class="ai-grid">
+   <div class="panel ring2 reveal"><div class="ph">Collaboration ring · last 12 months <i></i></div><div id="teamRing"></div><div class="sm" style="text-align:center">19 engineers whose pull requests I reviewed, across 18 repositories</div></div>
+   <div class="grid" style="gap:14px">
+    <div class="panel reveal"><div class="ph">How I support <i></i></div><ul class="guard">
+     <li><b>208</b> teammates' pull requests reviewed</li><li><b>7</b> change requests in the latest sprint, caught before merge</li>
+     <li><b>21</b> runbook and knowledge-page creates and updates</li><li>Joined other teams' incidents as a responder</li></ul></div>
+    <div class="panel reveal"><div class="ph">How I coordinate <i></i></div><ul class="guard">
+     <li><b>21</b> responder requests to bring the right experts into incidents</li><li><b>15</b> incidents opened and <b>5</b> escalations</li>
+     <li><b>69</b> production changes taken through CAB</li><li><b>107</b> work items raised and handed to the owning teams</li></ul></div>
+    <div class="panel reveal"><div class="ph">How I grow others <i></i></div><ul class="guard">
+     <li>Former AWS, DevOps and Linux trainer</li><li>Runbooks and knowledge pages so the next on-call engineer moves faster</li>
+     <li>Detailed, signed write-ups on <b>106</b> tickets, so handovers need no meeting</li></ul></div>
+   </div>
+  </div>
+ </div>
+</section>
+
+<section id="release" class="slide" data-title="End-to-end releases">
+ <div class="wrap">
+  <span class="eyebrow">End-to-end releases</span>
+  <h2>From merge to production, owned end to end</h2>
+  <p class="lead">I own the path a change takes to reach customers: the pipeline, the manifests, the gates and the watch after rollout.</p>
+  <div class="pipeline">
+   <div class="stage" style="--i:0"><span class="n">01</span><div class="ico">🧪</div><b>Build &amp; test</b><span>CI where tests gate publishing</span></div>
+   <div class="stage" style="--i:1"><span class="n">02</span><div class="ico">📦</div><b>Package &amp; version</b><span>Container images and semantic versions</span></div>
+   <div class="stage" style="--i:2"><span class="n">03</span><div class="ico">🔁</div><b>Promote</b><span>Registry replication across accounts</span></div>
+   <div class="stage" style="--i:3"><span class="n">04</span><div class="ico">🧭</div><b>GitOps deploy</b><span>Manifests reconciled per cluster</span></div>
+   <div class="stage" style="--i:4"><span class="n">05</span><div class="ico">🚦</div><b>Gates</b><span>Staging E2E, risk checks and CAB</span></div>
+   <div class="stage" style="--i:5"><span class="n">06</span><div class="ico">📈</div><b>Verify &amp; roll back</b><span>Dashboards, alerts and fast rollback</span></div>
+  </div>
+  <div class="dash" style="margin-top:16px">
+   <div class="panel reveal"><div class="ph">Deployment PRs <i></i></div><div class="big">62</div><div class="sm">40 merged in 12 months</div></div>
+   <div class="panel reveal"><div class="ph">Services shipped <i></i></div><div class="big">10</div><div class="sm">deployed or promoted through my changes</div></div>
+   <div class="panel reveal"><div class="ph">Release work items <i></i></div><div class="big">71</div><div class="sm">39 closed by me</div></div>
+   <div class="panel reveal"><div class="ph">Merge → production <i></i></div><div class="big">&lt;1<small>day</small></div><div class="sm">for a migrated service's first automated release (dark launch)</div></div>
+  </div>
+ </div>
+</section>
+
+<section id="quality" class="slide" data-title="Customers & code quality">
+ <div class="wrap">
+  <span class="eyebrow">Customers &amp; code quality</span>
+  <h2>Closing the loop for customers and code</h2>
+  <p class="lead">Customer-facing work and code fixes from the last 12 months, counted from Azure DevOps and GitHub.</p>
+  <div class="grid g2">
+   <div class="card oc reveal" style="--c:var(--sky)"><div class="kind">Customer issues handled</div><div class="num">41</div><div class="muted">customer and tenant requests in 12 months · 29 closed by me · 7 PRs</div>
+    <ul><li>Account and tenant lifecycle requests under change control</li><li>Custom-domain certificates and DNS for customer environments</li><li>Edge protection during customer security escalations</li><li>Clear incident updates for customers and stakeholders</li></ul></div>
+   <div class="card oc reveal" style="--c:var(--rose)"><div class="kind">Code bugs fixed</div><div class="num">26</div><div class="muted">bugs closed · 35 application-code PRs across 11 repositories · 18 targeted fixes (14 merged)</div>
+    <ul><li>Reproduce first: failing tests before the fix, passing after</li><li>Root-cause fixes for data-sync and race-condition defects</li><li>Fail-fast error handling instead of silent hangs</li><li>Regression specs shipped alongside fixes</li></ul></div>
+  </div>
+ </div>
+</section>
+
+<section id="experience" class="slide" data-title="Experience">
+ <div class="wrap">
+  <span class="eyebrow">Experience</span>
+  <h2>Nine years, one through-line: reliable production</h2>
+  <p class="lead">Every role widened the top of the T, and the SRE core kept getting deeper.</p>
+  <ol class="timeline">
+   <li class="role-item reveal">
+    <div class="when">Feb 2021 — Present</div>
+    <div class="card">
+     <h3>SRE / DevOps → Associate Cloud Service Manager</h3>
+     <div class="org">Accolite · Bounteous — clients: Sling TV / DISH and OneLogin</div>
+     <div class="tchips"><span class="chip deep">▼ Kubernetes &amp; GitOps</span><span class="chip deep">▼ Observability &amp; incident management</span><span class="chip broad">◀▶ Security</span><span class="chip broad">◀▶ Release &amp; change management</span><span class="chip broad">◀▶ Cost</span><span class="chip broad">◀▶ AI automation</span><span class="chip broad">◀▶ Team leadership</span></div>
+     <ul>
+      <li><b>Kubernetes &amp; GitOps:</b> designed and deployed containerised microservices with Kustomize patches (secrets, node scalers, HPA, pod identities, deployment strategies); automated dev, staging and prod with Argo CD (previously Flux), including self-healing and rollback.</li>
+      <li><b>CI/CD &amp; releases:</b> GitHub Actions and GitLab pipelines for build, test and deploy; release orchestration with approvals, versioning and rollback; zero-downtime canary and rolling deployments across EKS, EC2 and S3-hosted sites.</li>
+      <li><b>Change management:</b> production changes with testing, rollback plans and formal CAB approval; release notes, change logs and Confluence runbooks kept audit-ready.</li>
+      <li><b>Observability &amp; on-call:</b> Datadog across Kubernetes and EC2 (dashboards, APM, alerts routed to Slack, Teams and PagerDuty) plus New Relic; P1–P5 incidents with Status.io updates; RCAs, SLI/SLO tracking and preventive automation.</li>
+      <li><b>Security &amp; compliance:</b> NACLs, WAF protections, S3 bucket policies, IAM roles and policies, regular patching, SSL certificate deployments and security scanning via Puppet; sentinel checks and chaos testing.</li>
+      <li><b>Cost &amp; capacity:</b> rightsizing across clusters, capacity plans for new services and automated clean-up of unused resources — up to 20% lower cloud spend.</li>
+      <li><b>Platform operations:</b> regional failover and scheduled automation with Rundeck; RabbitMQ, Redis and database patching; bare-metal upgrades; on-premises-to-AWS and IaC migrations.</li>
+      <li><b>AI-assisted automation:</b> GitHub Copilot and AI tools to speed up Kubernetes manifests, Terraform modules and pipeline updates.</li>
+     </ul>
+    </div>
+   </li>
+   <li class="role-item reveal">
+    <div class="when">May 2019 — Feb 2021</div>
+    <div class="card">
+     <h3>Site Reliability Engineer</h3>
+     <div class="org">CSS Corp, Bangalore — client: Qubole</div>
+     <div class="tchips"><span class="chip deep">▼ SRE practices</span><span class="chip broad">◀▶ Multi-cloud</span><span class="chip broad">◀▶ Big-data platforms</span><span class="chip broad">◀▶ Terraform &amp; Chef</span><span class="chip broad">◀▶ Cost</span></div>
+     <ul>
+      <li>Built and troubleshot AWS, Azure, GCP and OpenStack infrastructure; deployed and monitored scalable, cost-optimised AWS environments.</li>
+      <li>Built staging and production environments with Terraform; infrastructure as code with Git and Chef; PCR, ACL and RM changes.</li>
+      <li>Supported Hadoop, Presto, Hive and Spark workloads on a cloud data lake; ELK, Kubernetes and migration projects; Ruby application fixes via the Rails console.</li>
+      <li>Gathered requirements and planned architectural changes for QA and production; automated repetitive operational work.</li>
+     </ul>
+    </div>
+   </li>
+   <li class="role-item reveal">
+    <div class="when">Apr 2018 — May 2019</div>
+    <div class="card">
+     <h3>Linux Engineer · DevOps &amp; AWS Trainer</h3>
+     <div class="org">Resileo Labs — client: RBCDSAI, IIT Madras · Besant Technologies (training)</div>
+     <div class="tchips"><span class="chip deep">▼ Linux administration</span><span class="chip broad">◀▶ Networking &amp; VPN</span><span class="chip broad">◀▶ Storage</span><span class="chip broad">◀▶ Teaching</span></div>
+     <ul>
+      <li>Linux servers end to end: LVM and RAID storage, web and proxy servers, site-to-site and user VPNs, Git, cloud web hosting and runbooks.</li>
+      <li>Trained engineers on AWS, DevOps practices and Linux.</li>
+     </ul>
+    </div>
+   </li>
+   <li class="role-item reveal">
+    <div class="when">May 2016 — Aug 2017</div>
+    <div class="card">
+     <h3>Cloud Support Engineer</h3>
+     <div class="org">Powerupcloud Technologies, Coimbatore</div>
+     <div class="tchips"><span class="chip deep">▼ AWS operations</span><span class="chip broad">◀▶ Monitoring</span><span class="chip broad">◀▶ Backup &amp; recovery</span><span class="chip broad">◀▶ Scripting</span></div>
+     <ul>
+      <li>Ran AWS production systems: VPC, EC2, S3, ELB, Lambda, Auto Scaling, EBS, RDS, IAM, CloudFormation, Route 53, CloudWatch and CloudFront.</li>
+      <li>Load balancing and auto scaling for fault-tolerant, cost-efficient environments; S3 versioning and lifecycle to Glacier; periodic restore tests; Docker-based deployments.</li>
+      <li>24×7 monitoring with CloudWatch and Sensu, centralised logs in Kibana, RCAs for production issues, and scheduled patching and security audits.</li>
+     </ul>
+    </div>
+   </li>
+  </ol>
+ </div>
+</section>
+<section id="cases" class="slide" data-title="Case studies">
+ <div class="wrap">
+  <span class="eyebrow">Case studies</span>
+  <h2>Problems solved, the way I solve them</h2>
+  <p class="lead">Measure first, change in small reversible steps, and leave the system easier to run than I found it.</p>
+  <div class="grid g2">
+   <article class="card case wide reveal">
+    <span class="tag">Migration · Kubernetes · CI/CD</span>
+    <h3>A legacy service moved to Kubernetes, without a big-bang cutover</h3>
+    <div class="psa">
+     <div><b>Problem</b>A customer-facing SSO-configuration service still ran on two virtual machines behind a classic load balancer, built by a legacy CI tool and deployed by hand.</div>
+     <div><b>What I did</b>Containerised it (multi-stage image, one image for web and worker), gated publishing on its test suite, automated semantic releases with image promotion across registries, wrote the Kubernetes manifests (probes, disruption budgets, external secrets) and launched it dark on both production colours.</div>
+     <div><b>Outcome</b>Releases flow from merge to production automatically, and the new stack runs dark in production with no customer impact. Two compatibility risks were caught before cutover: API path versioning, and a job queue shared by the old and new workers.</div>
+    </div>
+    <div class="flowlbl">Request flow · before</div>
+    <div class="flow"><span class="n">Admin action</span><span class="a">→</span><span class="n">App backend</span><span class="a">→</span><span class="n">DNS</span><span class="a">→</span><span class="n">Classic load balancer (TLS)</span><span class="a">→</span><span class="n">2 VMs · web + worker</span><span class="a">→</span><span class="n">Redis job queue</span><span class="a">→</span><span class="n">SaaS provider API</span></div>
+    <div class="flowlbl">Request flow · after</div>
+    <div class="flow"><span class="n">Admin action</span><span class="a">→</span><span class="n">App backend</span><span class="a">→</span><span class="n">DNS</span><span class="a">→</span><span class="n new">Global edge accelerator</span><span class="a">→</span><span class="n new">Gateway API ingress</span><span class="a">→</span><span class="n new">Kubernetes Service</span><span class="a">→</span><span class="n new">Web &amp; worker pods</span><span class="a">→</span><span class="n">Redis job queue</span><span class="a">→</span><span class="n">SaaS provider API</span></div>
+    <div class="flowlbl">Release pipeline</div>
+    <div class="flow"><span class="n new">Merge</span><span class="a">→</span><span class="n new">Scan</span><span class="a">→</span><span class="n new">Test</span><span class="a">→</span><span class="n new">Semantic version</span><span class="a">→</span><span class="n new">Registry replication</span><span class="a">→</span><span class="n new">Dev</span><span class="a">→</span><span class="n new">Staging E2E gate</span><span class="a">→</span><span class="n new">Production (dark)</span><span class="a">→</span><span class="n">Cutover (planned) · instant DNS rollback</span></div>
+   </article>
+   <article class="card case reveal">
+    <span class="tag">Security · Change management</span>
+    <h3>Global TLS certificate renewal with zero downtime</h3>
+    <div class="psa">
+     <div><b>Problem</b>OneLogin's annual renewal of external and internal-domain certificates spans four AWS regions and many load balancers.</div>
+     <div><b>What I did</b>Led 62 CAB-approved change steps: CSR and key generation with hash checks, Terraform and ACM rollout, ARN updates in Terraform Enterprise, and validation with OpenSSL and cURL across NLBs, ALBs, mobile and CDN endpoints, with rollback-ready backups.</div>
+     <div><b>Outcome</b>Zero downtime, tighter audit compliance and a reusable runbook for future renewals.</div>
+    </div>
+   </article>
+   <article class="card case reveal">
+    <span class="tag">Security · Edge</span>
+    <h3>Firewall hygiene backed by traffic data</h3>
+    <div class="psa">
+     <div><b>Problem</b>Allowlist entries let traffic skip the edge rate limit, and many of them had gone stale.</div>
+     <div><b>What I did</b>Ran a 30-day traffic analysis, then removed entries in staged batches, each with a rollback artifact and post-change checks.</div>
+     <div><b>Outcome</b>370+ unused entries retired, leaving a smaller and easier-to-audit allowlist. During security escalations, targeted IP and geo rules shipped through the same process.</div>
+    </div>
+   </article>
+   <article class="card case reveal">
+    <span class="tag">Data · Automation</span>
+    <h3>Self-healing routing after database failover</h3>
+    <div class="psa">
+     <div><b>Problem</b>After a managed-database failover, the network load balancer kept pointing at the old database address until someone fixed it by hand.</div>
+     <div><b>What I did</b>Built event-driven automation (database events → SNS → Lambda) that registers the new address with the load balancer, rolled out region by region with Terraform.</div>
+     <div><b>Outcome</b>One manual, high-pressure step removed from every database failover.</div>
+    </div>
+   </article>
+   <article class="card case reveal">
+    <span class="tag">Reliability · Capacity</span>
+    <h3>Capacity and memory fixes under incident pressure</h3>
+    <div class="psa">
+     <div><b>Problem</b>Queue backlogs, out-of-memory restarts and database write throttling during peak load.</div>
+     <div><b>What I did</b>Tuned event-driven autoscaling limits, aligned memory limits across regions, raised database autoscaling floors and codified them in Terraform, and added a fail-fast timeout for a slow upstream dependency.</div>
+     <div><b>Outcome</b>Backlogs drained, restarts stopped, and throttle alerts now recover on their own.</div>
+    </div>
+   </article>
+   <article class="card case reveal">
+    <span class="tag">Observability</span>
+    <h3>Alerts people trust</h3>
+    <div class="psa">
+     <div><b>Problem</b>Some monitors were noisy or permanently red, and some services had no per-region view.</div>
+     <div><b>What I did</b>Built per-service, per-region dashboards aligned to the public status page, added deploy markers for deploy-aware alerting, retired duplicate monitors and fixed false pages after an agent migration.</div>
+     <div><b>Outcome</b>Fewer false pages and faster triage for the on-call engineer.</div>
+    </div>
+   </article>
+  </div>
+ </div>
+</section>
+<section id="sprint" class="slide" data-title="Latest sprint">
+ <div class="wrap">
+  <span class="eyebrow">Latest sprint review</span>
+  <h2>23 Oct – 6 Nov 2026 at a glance</h2>
+  <p class="lead">A sanitised summary of a two-week sprint. Customer names, colleagues and internal system details are left out on purpose.</p>
+  <div class="sprint-kpis reveal">
+   <div class="sk"><b>24</b><span>work items closed, incl. 12 bugs</span></div>
+   <div class="sk"><b>30</b><span>pull requests raised · 22 merged</span></div>
+   <div class="sk"><b>55</b><span>code reviews across 11 repositories</span></div>
+   <div class="sk"><b>30 s</b><span>median time to acknowledge 18 on-call incidents</span></div>
+   <div class="sk"><b>30</b><span>production cloud changes</span></div>
+   <div class="sk"><b>8</b><span>monitors fixed, created or retired</span></div>
+   <div class="sk"><b>370+</b><span>stale firewall allowlist entries retired</span></div>
+   <div class="sk"><b>47</b><span>work items handled in total</span></div>
+  </div>
+  <ul class="hl reveal">
+   <li>Contained two edge security escalations with targeted WAF rules (IP blocking and geo-restriction).</li>
+   <li>Cleared a large message-queue backlog with event-driven autoscaling, and stopped out-of-memory restarts by aligning memory limits across regions.</li>
+   <li>Fixed database write throttling by raising autoscaling floors (codified in Terraform) and made the throttle alerts self-recovering.</li>
+   <li>Added a fail-fast timeout so a slow upstream identity provider can no longer tie up API capacity.</li>
+   <li>Found and fixed the root causes of two data-sync defects in production.</li>
+   <li>Shipped a per-tenant, default-off feature-flag foundation for a new audit log, proven with failing-then-passing automated tests.</li>
+   <li>Took the legacy-service migration to a dark production launch with automated releases.</li>
+   <li>Reviewed 37 pull requests from teammates and requested changes 7 times before merge.</li>
+  </ul>
+ </div>
+</section>
+
+<section id="skills" class="slide" data-title="Skills">
+ <div class="wrap">
+  <span class="eyebrow">Toolbox</span>
+  <h2>Core skills</h2>
+  <p class="lead">The tools behind the T: the core I go deep on, and the breadth I use every week.</p>
+  <div class="grid g4">
+   <div class="card skill reveal"><h3><span class="si" aria-hidden="true">☁️</span>Cloud platforms</h3><span class="chip">AWS</span><span class="chip">Azure</span><span class="chip">GCP</span><span class="chip">EKS</span><span class="chip">EC2</span><span class="chip">RDS</span><span class="chip">DynamoDB</span><span class="chip">WAF</span><span class="chip">ACM</span><span class="chip">Global Accelerator</span><span class="chip">Lambda</span></div>
+   <div class="card skill reveal"><h3><span class="si" aria-hidden="true">☸️</span>Containers &amp; GitOps</h3><span class="chip">Kubernetes</span><span class="chip">Docker</span><span class="chip">Helm</span><span class="chip">Kustomize</span><span class="chip">Argo CD</span><span class="chip">Flux</span><span class="chip">KEDA</span><span class="chip">HPA</span></div>
+   <div class="card skill reveal"><h3><span class="si" aria-hidden="true">⚙️</span>CI/CD &amp; IaC</h3><span class="chip">GitHub Actions</span><span class="chip">GitLab CI</span><span class="chip">Jenkins</span><span class="chip">Terraform</span><span class="chip">Terraform Enterprise</span><span class="chip">Artifactory</span><span class="chip">semantic-release</span></div>
+   <div class="card skill reveal"><h3><span class="si" aria-hidden="true">📈</span>Observability</h3><span class="chip">Datadog</span><span class="chip">APM &amp; DB monitoring</span><span class="chip">New Relic</span><span class="chip">Prometheus</span><span class="chip">ELK</span><span class="chip">Sumo Logic</span><span class="chip">PagerDuty</span><span class="chip">Status.io</span></div>
+   <div class="card skill reveal"><h3><span class="si" aria-hidden="true">🧩</span>Automation &amp; config</h3><span class="chip">SaltStack</span><span class="chip">Chef</span><span class="chip">Puppet</span><span class="chip">Rundeck</span><span class="chip">Shell scripting</span></div>
+   <div class="card skill reveal"><h3><span class="si" aria-hidden="true">🛡️</span>Security &amp; governance</h3><span class="chip">IAM</span><span class="chip">WAF &amp; NACLs</span><span class="chip">Certificate lifecycle</span><span class="chip">Prisma</span><span class="chip">Compliance audits</span><span class="chip">Backup &amp; recovery</span><span class="chip">Cost optimisation</span></div>
+   <div class="card skill reveal"><h3><span class="si" aria-hidden="true">🧭</span>Delivery &amp; leadership</h3><span class="chip">Azure DevOps</span><span class="chip">Jira</span><span class="chip">Agile / Scrum</span><span class="chip">Sprint planning</span><span class="chip">RCA</span><span class="chip">Change &amp; incident management</span><span class="chip">Confluence</span></div>
+   <div class="card skill reveal"><h3><span class="si" aria-hidden="true">✨</span>AI-assisted engineering</h3><span class="chip">GitHub Copilot CLI</span><span class="chip">MCP servers (10)</span><span class="chip">Claude models</span><span class="chip">GPT models</span><span class="chip">Multi-agent workflows</span><span class="chip">AI-assisted RCA</span><span class="chip">Human in the loop</span></div>
+  </div>
+ </div>
+</section>
+
+<section id="education" class="slide" data-title="Education">
+ <div class="wrap">
+  <span class="eyebrow">Education &amp; beyond</span>
+  <h2>Foundations</h2>
+  <div class="grid g3">
+   <div class="card reveal"><div class="kind">2013 — 2015</div><h3 style="font-size:18px;margin:6px 0">M.E. Multimedia Technology</h3><div class="muted">KSR College of Engineering · Anna University</div></div>
+   <div class="card reveal"><div class="kind">2008 — 2012</div><h3 style="font-size:18px;margin:6px 0">B.E. Information Technology</h3><div class="muted">Velalar College of Engineering and Technology · Anna University</div></div>
+   <div class="card reveal"><div class="kind">Alongside</div><h3 style="font-size:18px;margin:6px 0">Trainer, freelancer, volunteer</h3><div class="muted">AWS, DevOps and Linux trainer; freelance cloud and site-to-site VPN projects; community volunteering.</div></div>
+  </div>
+ </div>
+</section>
+
+<section id="contact" class="slide contact" data-title="Contact">
+ <div class="wrap">
+  <span class="eyebrow">Contact</span>
+  <h2>Let's build reliable platforms together</h2>
+  <p class="lead">Open to conversations about SRE, platform engineering and cloud operations leadership.</p>
+  <div class="btns">
+   <a class="btn primary" href="mailto:srobertkingsly@gmail.com" data-print="srobertkingsly@gmail.com"><span aria-hidden="true">✉️</span>Email</a>
+   <a class="btn" href="tel:+919043810120"><span aria-hidden="true">📞</span>+91 90438 10120</a>
+   <a class="btn" href="https://www.linkedin.com/in/robertkingsly/" target="_blank" rel="noopener" data-print="linkedin.com/in/robertkingsly">in LinkedIn</a>
+   <a class="btn" href="https://github.com/robertkingslys" target="_blank" rel="noopener" data-print="github.com/robertkingslys"><span aria-hidden="true">⌥</span>GitHub</a>
+  </div>
+ </div>
+</section>
+
+</main>
+<footer>
+ <div class="wrap">
+  <span>© 2026 Robert Kingsly · Last updated 6 Nov 2026</span>
+  <span class="hint">Press <kbd>P</kbd> to present · <kbd>←</kbd> <kbd>→</kbd> to move · <kbd>Esc</kbd> to exit</span>
+ </div>
+</footer>
+<div class="present-ui" role="toolbar" aria-label="Presentation controls">
+ <button class="icon-btn" type="button" id="prevBtn" aria-label="Previous slide">‹</button>
+ <span class="count" id="count">1 / 1</span>
+ <button class="icon-btn" type="button" id="nextBtn" aria-label="Next slide">›</button>
+ <span class="ttl" id="slideTitle"></span>
+ <button class="icon-btn" type="button" id="themeBtn2" aria-label="Toggle colour theme">◐</button>
+ <button class="icon-btn" type="button" id="exitBtn" aria-label="Exit presentation">✕</button>
+</div>
+<script>
+(function(){
+'use strict';
+var $=function(s){return document.querySelector(s)},$$=function(s){return Array.prototype.slice.call(document.querySelectorAll(s))};
+var reduce=!!(window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches);
+function esc(s){return String(s).replace(/[&<>"']/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]})}
+
+function toggleTheme(){var t=document.documentElement.getAttribute('data-theme')==='light'?'dark':'light';document.documentElement.setAttribute('data-theme',t);try{localStorage.setItem('rk-theme',t)}catch(e){}}
+$('#themeBtn').addEventListener('click',toggleTheme);$('#themeBtn2').addEventListener('click',toggleTheme);
+$('#printBtn').addEventListener('click',function(){window.print()});
+
+// Aggregated counts only (GitHub + Azure DevOps, 2026)
+var monthly=[['Feb',9],['Mar',49],['Apr',26],['May',41],['Jun',34],['Jul',38],['Aug',34],['Sep',56],['Oct',44],['Nov',8]];
+var mmax=Math.max.apply(null,monthly.map(function(x){return x[1]}));
+$('#monthly').innerHTML=monthly.map(function(x){return '<div class="bar" title="'+x[0]+' 2026: '+x[1]+' pull requests"><b>'+x[1]+'</b><i style="height:'+Math.round(x[1]/mmax*245)+'px"></i><span>'+x[0]+'</span></div>'}).join('');
+var focus=[['Kubernetes & GitOps',239],['Security & compliance',164],['Access & identity ops',125],['Migrations & modernisation',77],['Observability & alerting',76],['Incident response',56],['Data & messaging',55],['CI/CD & releases',52],['Cost optimisation',44],['Customer & tenant ops',44],['Infrastructure as Code',33]];
+$('#focus').innerHTML=focus.map(function(x){return '<div class="hb"><span>'+esc(x[0])+'</span><div class="t"><i style="width:'+(x[1]/focus[0][1]*100).toFixed(1)+'%"></i></div><b>'+x[1]+'</b></div>'}).join('');
+
+// 12-month scorecard visuals (aggregated counts only)
+function vbars(sel,data,maxPx){var mx=Math.max.apply(null,data.map(function(x){return x[1]}))||1;$(sel).innerHTML=data.map(function(x){return '<div class="bar" title="'+x[0]+' 2026: '+x[1]+'"><b>'+x[1]+'</b><i style="height:'+Math.max(3,Math.round(x[1]/mx*maxPx))+'px"></i><span>'+x[0]+'</span></div>'}).join('')}
+vbars('#pdMonthly',[['Feb',0],['Mar',210],['Apr',2],['May',79],['Jun',0],['Jul',79],['Aug',2],['Sep',22],['Oct',22],['Nov',2]],175);
+function stack(sel,arr){var tot=arr.reduce(function(a,x){return a+x[1]},0);
+ $(sel).innerHTML='<div class="stackbar">'+arr.map(function(x){return '<span title="'+esc(x[0])+': '+x[1]+'" style="width:'+(x[1]/tot*100).toFixed(2)+'%;background:'+x[2]+'"></span>'}).join('')+'</div><div class="leg">'+arr.map(function(x){return '<span><i style="background:'+x[2]+'"></i>'+esc(x[0])+'<b>'+x[1]+'</b></span>'}).join('')+'</div>'}
+stack('#prioBar',[['P1',12,'#ef4444'],['P2',219,'#f97316'],['P3',28,'#eab308'],['P5',1,'#22c55e'],['No priority set',158,'#64748b']]);
+stack('#chgMix',[['Certificates & TLS',23,'var(--accent)'],['Security & WAF',13,'var(--rose)'],['Deployments & upgrades',13,'var(--accent-2)'],['Decommission & clean-up',11,'var(--amber)'],['Access',5,'var(--sky)'],['Other',4,'#64748b']]);
+stack('#monMix',[['Metric',11,'var(--accent)'],['Log',3,'var(--accent-2)'],['Composite',1,'var(--amber)'],['Event',1,'var(--rose)']]);
+(function(){var v=52,max=300,a=Math.PI*(1-v/max),x=70+56*Math.cos(a),y=70-56*Math.sin(a);
+ $('#mttaGauge').innerHTML='<svg viewBox="0 0 140 80" aria-hidden="true"><defs><linearGradient id="gg"><stop offset="0" stop-color="#22c55e"/><stop offset="1" stop-color="#2dd4bf"/></linearGradient></defs><path d="M14 70 A56 56 0 0 1 126 70" fill="none" stroke="var(--card-2)" stroke-width="12" stroke-linecap="round"/><path d="M14 70 A56 56 0 0 1 '+x.toFixed(1)+' '+y.toFixed(1)+'" fill="none" stroke="url(#gg)" stroke-width="12" stroke-linecap="round"/><circle cx="'+x.toFixed(1)+'" cy="'+y.toFixed(1)+'" r="5" fill="#fff"/><text x="9" y="79" style="font-size:8px;fill:var(--muted)">0</text><text x="112" y="79" style="font-size:8px;fill:var(--muted)">5 min</text></svg><div class="gv">52<small> s</small></div>'})();
+(function(){var d=[['Datadog',2298],['GitHub',647],['Azure DevOps',613],['Confluence',144],['PagerDuty',84],['Identity admin API',26],['LaunchDarkly',17],['Knowledge base',13],['AWS Docs',4],['TestRail',1]];
+ var C=['#2dd4bf','#818cf8','#38bdf8','#fbbf24','#fb7185','#34d399','#a78bfa','#f472b6','#facc15','#94a3b8'],cx=310,cy=228,rx=232,ry=152,mx=d[0][1];
+ var N=d.map(function(x,i){var a=-Math.PI/2+i*2*Math.PI/d.length;return{n:x[0],v:x[1],x:cx+rx*Math.cos(a),y:cy+ry*Math.sin(a),r:9+26*Math.sqrt(x[1]/mx),c:C[i]}});
+ var g='<ellipse class="orbit" cx="'+cx+'" cy="'+cy+'" rx="'+rx+'" ry="'+ry+'"/>';
+ N.forEach(function(n){g+='<line class="spoke" x1="'+cx+'" y1="'+cy+'" x2="'+n.x.toFixed(1)+'" y2="'+n.y.toFixed(1)+'" stroke-width="'+Math.max(1,n.r/6).toFixed(1)+'"/>'});
+ g+='<circle cx="'+cx+'" cy="'+cy+'" r="50" fill="url(#cg)"/><text x="'+cx+'" y="'+(cy-3)+'" text-anchor="middle" style="font-size:13px;font-weight:900;fill:#04101d">Copilot CLI</text><text x="'+cx+'" y="'+(cy+14)+'" text-anchor="middle" style="font-size:11px;font-weight:800;fill:#04101d">agent</text>';
+ N.forEach(function(n){var up=n.y<cy-20,ly=up?n.y-n.r-20:n.y+n.r+15;g+='<g><circle cx="'+n.x.toFixed(1)+'" cy="'+n.y.toFixed(1)+'" r="'+n.r.toFixed(1)+'" fill="'+n.c+'" fill-opacity=".92"><title>'+esc(n.n)+': '+n.v+' tool calls</title></circle><text class="nlabel" x="'+n.x.toFixed(1)+'" y="'+ly.toFixed(1)+'" text-anchor="middle">'+esc(n.n)+'</text><text class="ncount" x="'+n.x.toFixed(1)+'" y="'+(ly+14).toFixed(1)+'" text-anchor="middle">'+n.v.toLocaleString('en-US')+(n.v===1?' call':' calls')+'</text></g>'});
+ $('#mcp').innerHTML='<svg viewBox="0 0 620 440" role="img" aria-label="MCP servers by tool calls: Datadog 2298, GitHub 647, Azure DevOps 613, Confluence 144, PagerDuty 84 and five more"><defs><radialGradient id="cg"><stop offset="0" stop-color="#5eead4"/><stop offset="1" stop-color="#818cf8"/></radialGradient></defs>'+g+'</svg>'})();
+var models=[['Claude Opus 4.8',33],['Claude Sonnet 4.6',16],['Claude Sonnet 5',6],['Claude Opus 5.5',5],['GPT-5.4 mini',2],['Claude Sonnet 5.5',1],['GPT-5.6 Luna',1],['GPT-5.4',1]];
+$('#models').innerHTML=models.map(function(x){return '<div class="hb"><span>'+esc(x[0])+'</span><div class="t"><i style="width:'+Math.max(3,x[1]/models[0][1]*100).toFixed(1)+'%"></i></div><b>'+x[1]+'</b></div>'}).join('');
+(function(){var n=19,cx=180,cy=150,R=112,g='<circle class="orbit" cx="'+cx+'" cy="'+cy+'" r="'+R+'"/>';
+ for(var i=0;i<n;i++){var a=-Math.PI/2+i*2*Math.PI/n,x=cx+R*Math.cos(a),y=cy+R*Math.sin(a);g+='<line x1="'+cx+'" y1="'+cy+'" x2="'+x.toFixed(1)+'" y2="'+y.toFixed(1)+'" stroke="var(--accent-2)" stroke-opacity=".3"/><circle cx="'+x.toFixed(1)+'" cy="'+y.toFixed(1)+'" r="10" fill="hsl('+(165+i*8)+' 70% 55%)"/>'}
+ g+='<circle cx="'+cx+'" cy="'+cy+'" r="36" fill="url(#tg)"/><text x="'+cx+'" y="'+(cy+6)+'" text-anchor="middle" style="font-size:18px;font-weight:900;fill:#04101d">RK</text>';
+ $('#teamRing').innerHTML='<svg viewBox="0 0 360 300" role="img" aria-label="19 teammates connected through code review"><defs><linearGradient id="tg"><stop offset="0" stop-color="#2dd4bf"/><stop offset="1" stop-color="#818cf8"/></linearGradient></defs>'+g+'</svg>'})();
+(function(){var el=$('#typed'),out=$('#termOut');if(!el||!out||reduce)return;var full=el.textContent,i=0;el.textContent='';out.style.visibility='hidden';
+ (function tick(){el.textContent=full.slice(0,++i);if(i<full.length)setTimeout(tick,35+Math.random()*45);else setTimeout(function(){out.style.visibility='visible'},300)})()})();
+
+var UNIT='pull requests and work items in 2026';
+var T={depth:[
+ {k:'k8s',ico:'☸️',n:'Kubernetes & GitOps',v:239,d:'Running multi-region EKS fleets through GitOps: Kustomize overlays reconciled by Argo CD (previously Flux), with blue/green clusters, autoscaling and safe rollouts.',
+  ex:['Tuned HPA and KEDA autoscaling to drain queue backlogs during incidents','Rolled services out across blue and green production clusters with canary checks','Upgraded Kubernetes by standing up new EKS versions and shifting workloads across'],tools:['EKS','Argo CD','Flux','Kustomize','Helm','KEDA']},
+ {k:'rel',ico:'🚨',n:'Reliability & incident response',v:56,d:'On-call for P1–P5 incidents: fast acknowledgement, calm customer updates, and root-cause fixes that stop repeats.',
+  ex:['On call for 439 incidents in 12 months: median 52-second acknowledgement, 98% within 5 minutes','116 incidents resolved hands-on, with out-of-memory, throttling and timeout fixes at the root','21 responder requests and 5 escalations to bring in the right experts fast'],tools:['PagerDuty','Datadog','Status.io','Runbooks']},
+ {k:'obs',ico:'📈',n:'Observability & alerting',v:76,d:'Signals that point at the problem: dashboards, APM, logs and monitors tuned for low noise.',
+  ex:['16 production monitors built and 50 existing monitors tuned in 12 months','320 deploy-regression monitors generated programmatically for a deploy-aware rollout','Per-service, per-region dashboards aligned to the public status page'],tools:['Datadog','APM','New Relic','Prometheus','ELK']},
+ {k:'chg',ico:'✅',n:'Production change safety',v:69,unit:'production changes through CAB in 2026',d:'Every production change tested, approved and reversible.',
+  ex:['Formal CAB approvals with test evidence and rollback plans','Dark launches and staged batches before customer-facing cutovers','Release notes, change logs and runbooks kept audit-ready'],tools:['CAB','Azure DevOps','Confluence','Blue/green']}
+],breadth:[
+ {k:'cloud',ico:'☁️',s:'Cloud',n:'Multi-cloud platforms',ev:'AWS · Azure · GCP · OpenStack',d:'Production operations on AWS, plus Azure, GCP and OpenStack estates in earlier roles.',
+  ex:['EKS, EC2, RDS, DynamoDB, S3, CloudFront, Route 53, WAF and Global Accelerator in production','Built and troubleshot AWS, Azure, GCP and OpenStack infrastructure for a data-platform client','Migrated on-premises clusters to AWS'],tools:['AWS','Azure','GCP','OpenStack']},
+ {k:'sec',ico:'🛡️',s:'Security',n:'Security & compliance',v:164,d:'Certificate lifecycle, edge protection and least-privilege access, delivered through change control.',
+  ex:['Certificate renewals, rotations and migrations to AWS Certificate Manager across regions','Data-driven WAF clean-up, plus rapid IP and geo rules during escalations','IAM roles and policies, NACLs, S3 bucket policies, patching and security scanning'],tools:['AWS WAF','ACM','IAM','Prisma','Puppet']},
+ {k:'access',ico:'🔑',s:'Access',n:'Access & identity operations',v:125,d:'Least-privilege onboarding and offboarding for engineers and services, managed as code.',
+  ex:['SSH and runbook-automation access managed in Puppet and Rundeck','Access removed promptly on offboarding','Tool onboarding for new team members'],tools:['Puppet','Rundeck','IAM','SSO']},
+ {k:'mig',ico:'🔄',s:'Migrations',n:'Migrations & modernisation',v:77,d:'Moving legacy workloads forward without big-bang risk.',
+  ex:['Containerised a legacy Ruby service and moved it from EC2 to EKS with a dark launch','Stood up new EKS versions for cluster upgrades','Decommissioned legacy hosts, bastions and stale security groups'],tools:['Docker','EKS','ECR','Terraform']},
+ {k:'cicd',ico:'⚙️',s:'CI/CD',n:'CI/CD & release engineering',v:52,d:'Pipelines that build, test, scan, version and promote releases automatically.',
+  ex:['GitHub Actions pipelines where tests gate publishing','Semantic versioning with promotion from dev to staging (E2E gate) to production','GitLab pipelines with Jira automation for dev, QA, beta and prod'],tools:['GitHub Actions','GitLab CI','Jenkins','semantic-release']},
+ {k:'data',ico:'🗄️',s:'Data',n:'Data & messaging services',v:55,d:'Keeping the stateful layer healthy and self-healing.',
+  ex:['Event-driven automation that re-points the load balancer after a database failover','Raised DynamoDB autoscaling floors after a throttling incident, codified in Terraform','RabbitMQ queues, Redis and database patching'],tools:['RDS','DynamoDB','Redis','RabbitMQ','SNS','Lambda']},
+ {k:'cost',ico:'💰',s:'Cost',n:'Cost optimisation',v:44,d:'Spend that tracks real usage.',
+  ex:['Rightsizing analysis across services and clusters','Scaled idle non-production node groups to zero','Automated clean-up of unused resources: up to 20% lower cloud spend'],tools:['Cost Explorer','Datadog','Kubernetes']},
+ {k:'iac',ico:'🧩',s:'IaC',n:'Infrastructure as Code & configuration',v:33,d:'Everything reproducible, reviewed and reversible.',
+  ex:['Terraform modules and workspaces for multi-region infrastructure','Puppet, SaltStack and Chef for host configuration','Canary testing and scaling requirements captured in IaC'],tools:['Terraform','Puppet','SaltStack','Chef']},
+ {k:'cust',ico:'🤝',s:'Customers',n:'Customer & tenant operations',v:44,d:'Customer-facing operations handled calmly and on the record.',
+  ex:['Tenant requests executed through change control with rollback plans','Custom-domain certificates and DNS for customer environments','Hourly incident updates to customers and stakeholders'],tools:['Status.io','Azure DevOps','Change control']},
+ {k:'ai',ico:'✨',s:'AI',n:'AI-assisted engineering',v:89,unit:'AI-assisted pull requests in 2026 (26%)',d:'Using AI agents to move faster without lowering the bar: every change is still tested and reviewed.',
+  ex:['10 MCP servers in daily use (observability, incidents, tickets, code, docs, feature flags): about 3,800 tool calls','8 Claude and GPT models, picked per task, across 108 agent sessions','106 tickets documented with AI drafts signed in my name, and 203 human-in-the-loop checkpoints'],tools:['GitHub Copilot CLI','MCP','Claude','GPT','Multi-agent workflows']},
+ {k:'lead',ico:'🧭',s:'Leadership',n:'Leadership & mentoring',ev:'Associate Cloud Service Manager',d:'Planning, coordination and growing others.',
+  ex:['Coordinates Dev, QA, product and support teams through releases and incidents','Sprint planning, RCA reviews and Confluence documentation','Former AWS, DevOps and Linux trainer'],tools:['Agile / Scrum','Azure DevOps','Jira','Confluence']}
+]};
+var MAXV=239,ALL=T.depth.concat(T.breadth);
+function evidence(x){return x.v?(x.v+' '+(x.unit||UNIT)):(x.ev||'')}
+function seg(x,depth){return '<button class="tseg" type="button" data-k="'+x.k+'" aria-pressed="false" aria-label="'+esc(x.n)+'"><span class="ico" aria-hidden="true">'+x.ico+'</span><span class="lbl">'+esc(depth?x.n:x.s)+'</span><span class="m" aria-hidden="true"'+(x.v?'':' style="visibility:hidden"')+'><i style="width:'+(x.v?Math.max(8,Math.round(x.v/MAXV*100)):0)+'%"></i></span></button>'}
+$('#tbar').innerHTML=T.breadth.map(function(x){return seg(x,false)}).join('');
+$('#tstem').innerHTML=T.depth.map(function(x){return seg(x,true)}).join('');
+function pick(k){var x=ALL.filter(function(y){return y.k===k})[0];if(!x)return;
+ $$('.tseg').forEach(function(b){var on=b.getAttribute('data-k')===k;b.classList.toggle('on',on);b.setAttribute('aria-pressed',on?'true':'false')});
+ $('#tdetail').innerHTML='<div class="kind">'+(T.depth.indexOf(x)>=0?'Depth · SRE core':'Breadth')+'</div><h3>'+x.ico+' '+esc(x.n)+'</h3><div class="ev">'+esc(evidence(x))+'</div><p class="muted" style="margin:8px 0 0">'+esc(x.d)+'</p><ul>'+x.ex.map(function(e){return '<li>'+esc(e)+'</li>'}).join('')+'</ul><div>'+x.tools.map(function(t){return '<span class="chip">'+esc(t)+'</span>'}).join('')+'</div>'}
+document.addEventListener('click',function(e){var b=e.target.closest&&e.target.closest('.tseg');if(b)pick(b.getAttribute('data-k'))});
+pick('k8s');
+$('#tprint').innerHTML='<div class="grid g2">'+ALL.map(function(x){return '<div class="card"><b>'+x.ico+' '+esc(x.n)+'</b> <span class="muted">— '+esc(evidence(x))+'</span><div class="muted">'+esc(x.d)+'</div></div>'}).join('')+'</div>';
+
+function countUp(el){var to=+el.getAttribute('data-count');if(reduce||!to)return;var t0=null;el.textContent='0';
+ requestAnimationFrame(function step(ts){if(!t0)t0=ts;var p=Math.min(1,(ts-t0)/900);el.textContent=String(Math.round(to*(1-Math.pow(1-p,3))));if(p<1)requestAnimationFrame(step)})}
+var io='IntersectionObserver' in window?new IntersectionObserver(function(es){es.forEach(function(e){if(!e.isIntersecting)return;e.target.classList.add('in');Array.prototype.forEach.call(e.target.querySelectorAll('[data-count]'),countUp);io.unobserve(e.target)})},{threshold:0.01,rootMargin:'0px 0px -4% 0px'}):null;
+$$('.reveal').forEach(function(el){if(io)io.observe(el);else el.classList.add('in')});
+var links=$$('.links a');
+if(io){var so=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting)links.forEach(function(a){a.classList.toggle('on',a.getAttribute('href')==='#'+e.target.id)})})},{rootMargin:'-45% 0px -50% 0px'});$$('main section.slide').forEach(function(s){so.observe(s)})}
+
+// Presentation mode: every section becomes a slide
+var slides=$$('main section.slide'),cur=0,presenting=false;
+function go(i){cur=Math.max(0,Math.min(slides.length-1,i));slides.forEach(function(s,j){s.classList.toggle('current',j===cur)});
+ $('#progress').style.width=((cur+1)/slides.length*100)+'%';$('#count').textContent=(cur+1)+' / '+slides.length;$('#slideTitle').textContent=slides[cur].getAttribute('data-title')||'';
+ slides[cur].scrollTop=0;if(history.replaceState)history.replaceState(null,'','#'+slides[cur].id)}
+function present(on){if(on===presenting)return;
+ if(on){var y=window.scrollY+120,i=0;slides.forEach(function(s,j){if(s.offsetTop<=y)i=j});presenting=true;document.body.classList.add('presenting');go(i);
+  var de=document.documentElement;if(de.requestFullscreen){var p=de.requestFullscreen();if(p&&p.catch)p.catch(function(){})}}
+ else{presenting=false;document.body.classList.remove('presenting');slides.forEach(function(s){s.classList.remove('current')});
+  if(document.fullscreenElement&&document.exitFullscreen){var q=document.exitFullscreen();if(q&&q.catch)q.catch(function(){})}
+  slides[cur].scrollIntoView({behavior:'auto'})}}
+$$('[data-present]').forEach(function(b){b.addEventListener('click',function(){present(true)})});
+$('#prevBtn').addEventListener('click',function(){go(cur-1)});$('#nextBtn').addEventListener('click',function(){go(cur+1)});$('#exitBtn').addEventListener('click',function(){present(false)});
+document.addEventListener('fullscreenchange',function(){if(!document.fullscreenElement&&presenting)present(false)});
+document.addEventListener('keydown',function(e){if(e.metaKey||e.ctrlKey||e.altKey)return;var k=e.key,t=e.target;
+ if(t.closest&&t.closest('input,textarea,select'))return;
+ if(!presenting){if(k==='p'||k==='P')present(true);return}
+ if((k==='Enter'||k===' ')&&t.closest&&t.closest('button,a'))return;
+ if(k==='ArrowRight'||k==='PageDown'||k===' '||k==='Enter'){e.preventDefault();go(cur+1)}
+ else if(k==='ArrowLeft'||k==='PageUp'){e.preventDefault();go(cur-1)}
+ else if(k==='Home'){e.preventDefault();go(0)}else if(k==='End'){e.preventDefault();go(slides.length-1)}
+ else if(k==='Escape'||k==='p'||k==='P'){present(false)}});
+var tx=null;
+document.addEventListener('touchstart',function(e){if(presenting)tx=e.touches[0].clientX},{passive:true});
+document.addEventListener('touchend',function(e){if(!presenting||tx===null)return;var dx=e.changedTouches[0].clientX-tx;if(Math.abs(dx)>60)go(cur+(dx<0?1:-1));tx=null},{passive:true});
+if(/[?&]present\b/.test(location.search))present(true);
+})();
+</script>
+</body>
+</html>
